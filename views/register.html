@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/9fc2b02ed9.js" crossorigin="anonymous"></script>
+  <title>Formulario de registro</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/normalize.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="main-header-top-bar">
+          <a href="/" class="logo-register"><img src="img/logo-mercado-liebre.svg" alt="Logo de la empresa" ></a>
+         
+          <div class="barra">
+          <h3>Buscar productos, marcas y más</h3>
+          <i style="background-color: white;
+          border-radius: 5px; padding: 3px;" class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        
+    
+          <div>
+          <h2 class="copy-header">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+          Compra en coutas y sin tarjeta de crédito</h2>
+          </div>
+        </div>
+    
+          <a href="#" class="hamburger-buttom"><i class="fa-solid fa-bars"></i></a>
+        
+        <nav class="main-navbar">
+          <ul class="left-navbar">
+            <li><a href="#">Ofertas</a></li>
+            <li><a href="#">Tiendas Oficiales</a></li>
+            <li><a href="#">Vender</a></li>
+            <li><a href="#">Ayuda</a></li>
+          </ul> 
+    
+          <ul class="rigth-navbar">
+            <li><a href="/login">Ingresa</a> <i class="fa-sharp fa-solid fa-right-to-bracket"></i></li>
+            <li><a href="#">Mis compras</a> <i class="fa-solid fa-basket-shopping"></i></li>
+          </ul> 
+        </nav>
+    </header>
+
+    <main>
+        <form action="/views/register.html" method="post" class="formulario">
+            <section>
+                <div class="control-formulario">
+                    <label for="nombre">Nombre y apellido:</label>
+                    <input type="text" name="nombreyapellido" id="nombre" required>
+                </div>
+                <div class="control-formulario">
+                    <label for="nombreusuario">Nombre de Usuario:</label>
+                    <input type="text" name="nombreDeUsuario" id="nombreusuario">
+                </div>
+                <div class="control-formulario">
+                    <label for="fechanacimiento">Fecha de nacimiento:</label>
+                    <input type="date" name="fechanacimiento" id="fechanacimiento" required>
+                </div>
+                <div class="control-formulario">
+                    <label for="domicilio">Domicilio:</label>
+                    <input type="text" name="domicilio" id="domicilio" required>
+                </div>
+                <br>
+
+                <fieldset>
+                    <legend>Perfil de Usuario</legend>
+
+                <label>
+                    <input type="radio" name="preferencia" id="preferencia" value="Comprar">Comprar
+                </label>
+
+                <label>
+                    <input type="radio" name="preferencia" id="preferencia" value="Vender">Vender
+                </label>   
+                </fieldset>
+                <br>
+                <fieldset>
+                <legend>Categoria de Interes</legend>
+
+                    <label>
+                        <input type="checkbox" name="categorias" id="categorias" value="Electro">Electro
+                    </label>
+                    
+                    <label>
+                        <input type="checkbox" name="categorias" id="categorias" value="Moda">Moda
+                    </label>
+                    
+                    <label>
+                        <input type="checkbox" name="categorias" id="categorias" value="Hogar">Hogar
+                    </label>
+                    
+                    <label>
+                        <input type="checkbox" name="categorias" id="categorias" value="Jugueteria">Jugueteria
+                    </label>
+                    
+                    <label>
+                        <input type="checkbox" name="categorias" id="categorias" value="Vida-Sana">Vida Sana
+                    </label>
+                </fieldset>
+
+                <br>
+                <div class="control-formulario">
+                    <label>Elegi tu foto de usuario:</label>
+                    <input type="file" name="fotoperfil" accept=".jpg" multiple>
+                </div>
+
+                <br>
+
+                <div class="control-formulario">
+                    <label for="contraseña">Crea tu contraseña:</label>
+                    <input type="password" name="contraseña" id="contraseña" required>
+                </div>
+                <div class="control-formulario">
+                    <label for="contraseña">Confirma contraseña:</label>
+                    <input type="password" name="contraseña2" id="contraseña" required>
+                </div>
+
+                <br>
+            
+                <button class="register-button" type="submit">Enviar</button>
+                <button class="register-button" type="reset">Borrar</button>
+            </section>
+        </form>
+    </main>
+</body>
+</html>
